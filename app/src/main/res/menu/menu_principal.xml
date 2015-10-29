@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Principal">
+
+
+    <item android:id="@+id/mn_ordenaMayor" android:title="@string/str_ordenarMayor"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/mas"/>
+    <item android:id="@+id/mn_ordenaMenor" android:title="@string/str_ordenarMenor"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:icon="@drawable/menos"/>
+
+    <item android:id="@+id/mn_sinc" android:title="@string/str_ordenarMenor"
+        android:icon="@drawable/menos"/>
+</menu>

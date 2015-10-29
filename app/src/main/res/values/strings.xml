@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Contactos Sinc</string>
+
+
+
+    //Menu principal
+    <string name="str_ordenarMayor">Ordenar (Asc)</string>
+    <string name="str_ordenarMenor">Ordenar (Des)</string>
+    <string name="action_settings">Opciones</string>
+    //Menu Contextual
+    <string name="str_editar">Editar</string>
+    <string name="str_borrar">Borrar</string>
+    //Menu Sincro
+    <string name="str_leer">Leer</string>
+    <string name="str_sincro">Sincronizar</string>
+    <string name="str_ajustes">Ajustes</string>
+
+
+    //Dialogo insertar
+    <string name="dial_Titulo">Añadir</string>
+
+    <string name="dial_nom">Nombre</string>
+    <string name="dial_tel">Telefono</string>
+    <string name="dial_tel2">Telefono 2</string>
+    <string name="dial_tel3">Telefono 3</string>
+    <string name="dial_insert">Insertar</string>
+    <string name="dial_cancel">Cancelar</string>
+
+    <string name="dial_Titulo_ed">Editar</string>
+
+    <string name="dial_det_Titulo">Detalles</string>
+    <string name="dial_det_back">Atrás</string>
+    <string name="title_activity_sincronizacion">Sincronizacion</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    //Dialogo preferencias
+    <string name="dial_pref">Ajustes</string>
+    <string name="dial_pref_gc">Sincronización</string>
+    <string name="dial_pref_cb1">Automática</string>
+    <string name="dial_pref_cb2">Manual</string>
+    <string name="dial_pref_fecha">Fecha:</string>
+    <string name="dial_pref_save">Guardar</string>
+    <string name="dial_pref_cancel">Cancelar</string>
+
+</resources>

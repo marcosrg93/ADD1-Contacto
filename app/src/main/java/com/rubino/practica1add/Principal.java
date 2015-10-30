@@ -67,6 +67,7 @@ public class  Principal extends AppCompatActivity implements SearchView.OnQueryT
         int id = item.getItemId();
 
 
+        View v = getCurrentFocus();
         if (id == R.id.mn_ordenaMayor) {
             ordenaNombresAsc();
             ac.notifyDataSetChanged();
@@ -77,7 +78,10 @@ public class  Principal extends AppCompatActivity implements SearchView.OnQueryT
             ac.notifyDataSetChanged();
             return true;
         }
-
+        if (id == R.id.mn_sinc) {
+            sincronizacion(v);
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);

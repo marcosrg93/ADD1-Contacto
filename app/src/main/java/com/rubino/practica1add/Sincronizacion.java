@@ -197,6 +197,8 @@ public class Sincronizacion extends AppCompatActivity {
 
 
 
+        //Comprueba la posición en el listview para ocultarlo o no según la acción realizada
+        listView.setOnScrollListener(new OnScrollUpDownListener(listView, 8, scrollAction));
 
         listView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

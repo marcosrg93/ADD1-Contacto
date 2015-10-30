@@ -10,6 +10,5 @@
         app:showAsAction="ifRoom|collapseActionView"
         android:icon="@drawable/menos"/>
 
-    <item android:id="@+id/mn_sinc" android:title="@string/str_ordenarMenor"
-        android:icon="@drawable/menos"/>
+    <item android:id="@+id/mn_sinc" android:title="@string/str_sincro"/>
 </menu>

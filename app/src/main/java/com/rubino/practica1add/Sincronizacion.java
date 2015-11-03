@@ -140,6 +140,7 @@ public class Sincronizacion extends AppCompatActivity {
     }
 
 
+
     //Inicializamos todos los componentes que llamaremos en el onCreate
     public  void init() throws IOException, XmlPullParserException {
 
@@ -368,37 +369,23 @@ public class Sincronizacion extends AppCompatActivity {
         LayoutInflater inflater= LayoutInflater.from(this);
         final View vista = inflater.inflate(R.layout.dialogo_pref, null);
 
-        /*final Calendar c = Calendar.getInstance();
+        final Calendar c = Calendar.getInstance();
         final int anio = c.get(Calendar.YEAR); //obtenemos el año
         final int mes = c.get(Calendar.MONTH)+1; //obtenemos el mes
         final int dia = c.get(Calendar.DAY_OF_MONTH);//obtenemos el día
-        final int hora = c.get(Calendar.HOUR_OF_DAY); //obtenemos la hora*/
+        final int hora = c.get(Calendar.HOUR_OF_DAY); //obtenemos la hora
 
         TextView tvFecha = (TextView)vista.findViewById(R.id.tvFecha);
         final RadioButton rb1,rb2;
-       rb1= (RadioButton)vista.findViewById(R.id.radioButton);
+        rb1= (RadioButton)vista.findViewById(R.id.radioButton);
         rb2= (RadioButton)vista.findViewById(R.id.radioButton2);
-        Date lastModified = new Date(Calendar.DATE);
 
-        File file = new File(getExternalFilesDir(null),"cont_backup.xml");
-
-        String valor = "";
-        valor = pc.getString("Fecha","");
-        if(valor.equals("")){
 
             String fecha;
             Boolean sin;
 
-        if (file.exists()) {
-            lastModified = new Date(file.lastModified());
-        }
-
-
-
-            pc = setPreferencia();
-
-
-                fecha = pc.getString("Fecha",lastModified + "");
+                pc = setPreferencia();
+                fecha = pc.getString("Fecha","");
 
                 tvFecha.setText(fecha);
 
@@ -411,10 +398,9 @@ public class Sincronizacion extends AppCompatActivity {
             } else {
                 rb1.setChecked(true);
             }
-        }
+
 
         alert.setView(vista);
-        final Date finalLastModified = lastModified;
         alert.setPositiveButton(R.string.dial_insert,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
@@ -433,7 +419,7 @@ public class Sincronizacion extends AppCompatActivity {
                         SharedPreferences.Editor ed = pc.edit();
                         ed.putBoolean("Sincronizacion", sinc);
 
-                        ed.putString("Fecha ", finalLastModified +"");
+                        ed.putString("Fecha ", dia+"/"+mes+"/"+anio+"-"+hora);
                         ed.commit();
                         Log.v("Guardo Preferencias", "");
                     }
